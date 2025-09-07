@@ -9,8 +9,8 @@
                 <!-- If array has records -->
                 <ul *ngIf="this.unmappedArray.length > 0; else noUnmapped">
                     <li *ngFor="let item of unmappedArray">
-                        <button class="icon">+</button>
-                        {{item.title}}
+                        <button class="icon" (click)="onMapUnmapItems(item,true)">+</button>
+                        <span style="font-size: 1.1rem;font-weight: 400;">{{item.title}}</span>
                     </li>
                 </ul>
 
@@ -28,7 +28,7 @@
                 <!-- If array has records -->
                 <ul *ngIf="this.mappedArray.length > 0; else noMapped">
                     <li *ngFor="let item of mappedArray">
-                        <button class="icon">-</button>
+                        <button class="icon" (click)="onMapUnmapItems(item,false)">-</button>
                         <span style="font-size: 1.1rem;font-weight: 400;">{{item.title}}</span>
                     </li>
                 </ul>
