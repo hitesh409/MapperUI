@@ -1,1 +1,51 @@
 /* You can add global styles to this file, and also import other style files */
+.button {
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  border: none;
+  font-size: 1.2rem;
+  background-color: #00c3ff;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+.button:hover {
+  background-color: #0099cc;
+}
+.button[value="cancel"] {
+  background-color: #b0b0b0;
+}
+.button[value="cancel"]:hover {
+  background-color: #8c8c8c;
+}
+.no-records {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #888;
+  background-color:#f1f1f1 ;
+  border-radius: 0.5rem;
+}
+.icon{
+    display: flex;                /* flexbox centers icon */
+  align-items: center;          /* vertical center */
+  justify-content: center;
+    place-content: center;
+  padding: 0.8rem;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #00c3ff;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+}
+
+.icon:hover {
+  background-color: #0099cc;
+  transform: scale(1.1);
+}

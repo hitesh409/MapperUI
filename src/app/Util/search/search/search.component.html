@@ -1,0 +1,7 @@
+<div class="search">
+    <input type="text" [value]="searchString()" [placeholder]="placeHolder()"
+        (input)="onSearchInput($event)" #searchInput class="search-bar" id="searchInput" />
+    <button *ngIf="searchString()" (click)="searchString.set('')" class="clear-btn" type="button" >
+        &times;
+    </button>
+</div>

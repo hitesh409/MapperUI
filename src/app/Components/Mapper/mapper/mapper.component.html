@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="main-content">
+        <fieldset class="unmapped">
+            <legend>Unmapped Array</legend>
+
+            <app-search #unmappedSearch placeHolder="Search unmapped..."></app-search>
+
+            <div class="content">
+                <!-- If array has records -->
+                <ul *ngIf="this.unmappedArray.length > 0; else noUnmapped">
+                    <li *ngFor="let item of unmappedArray">
+                        <button class="icon">+</button>
+                        {{item.title}}
+                    </li>
+                </ul>
+
+                <!-- Else show message -->
+                <ng-template #noUnmapped>
+                    <p class="no-records">No records found</p>
+                </ng-template>
+            </div>
+        </fieldset>
+
+        <fieldset class="mapped">
+            <legend>Mapped Array</legend>
+            <app-search #mappedSearch placeHolder="Search mapped..."></app-search>
+            <div class="content">
+                <!-- If array has records -->
+                <ul *ngIf="this.mappedArray.length > 0; else noMapped">
+                    <li *ngFor="let item of mappedArray">
+                        <button class="icon">-</button>
+                        <span style="font-size: 1.1rem;font-weight: 400;">{{item.title}}</span>
+                    </li>
+                </ul>
+
+                <!-- Else show message -->
+                <ng-template #noMapped>
+                    <p class="no-records">No records found</p>
+                </ng-template>
+            </div>
+        </fieldset>
+    </div>
+    <div class="actions">
+        <button class="button">Save</button>
+        <button class="button" value="cancel">Cancel</button>
+    </div>
+
+</div>
