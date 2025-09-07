@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { MapperComponent } from "./Components/Mapper/mapper/mapper.component";
+import { MapperComponent } from "./Components/Mapper/mapper.component";
 
 @Component({
   selector: 'app-root',
